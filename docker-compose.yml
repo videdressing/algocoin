@@ -1,12 +1,12 @@
 version: "3.1"
 services:
-  web:
+  firebase:
     build:
         context: docker
-        dockerfile: Dockerfile
+        dockerfile: firebaseDockerfile
     container_name: algocoin
     command: ls -la /
     volumes:
-      - .:/code
+      - ./firebase:/code
     ports:
       - "8080:8080"
